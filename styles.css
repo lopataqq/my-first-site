@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #11152C;
+    color: #FFFFFF;
+}
+
+header .logo {
+    height: 54px;
+}
+
+header .menu-logo {
+    width: 32px;
+    height: 32px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0 16px;
+    height: 70px;
+    border-bottom: 1px solid #858585;
+    background: #11152C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category .tag {
+    height: 40px;
+    border-radius: 9px;
+    padding: 0 16px;
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 40px;
+    margin-right: 10px;
+}
+
+.category {
+    display: flex;
+    overflow: auto;
+    margin-top: 24px;
+    padding: 0 16px 10px;
+    justify-content: space-between;
+}
+
+.category .tag.active {
+    background: #2563eb
+}
+
+footer {
+    margin-top: 50px;
+    margin-bottom: 16px;
+    padding: 0 16px;
+}
+
+footer .footer-logo {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 0 auto;
+}
+
+footer .list-documents {
+margin: 24px 0;
+list-style: none;
+padding: 0;
+}
+
+footer .list-documents li {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer .contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .contact h3 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+footer .contact li {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+footer .contact li a {
+    text-decoration: underline;
+    opacity: 0.5;
+}
+
+footer .rights {
+    text-align: center;
+    font-size: 12px;
+    color: #858585;
+    opacity: 0.5;
+}
