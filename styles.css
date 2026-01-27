@@ -68,32 +68,99 @@ header .tittle-header {
     font-weight: bold;
 }
 
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    padding: 24px 20px 28px;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 main .category .tag {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #858585; /* Цвет как у полоски в хедере */
-    border-radius: 9px;        /* Твой радиус из кода */
-    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    min-height: 48px;
+    border: 1px solid #858585;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
     color: #FFFFFF;
-    text-decoration: none;
+    font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
     cursor: pointer;
-    margin: 5px;
-}
-
-.category {
-    display: flex;
-    overflow: auto;
-    margin-top: 24px;
-    padding: 0 16px 10px;
-    justify-content: space-between;
+    white-space: nowrap;
 }
 
 .category .tag:hover {
-    background: #11152C;
-    border-color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.6);
     transform: translateY(-2px);
+}
+
+/* About section */
+main .about-section {
+    padding: 32px 16px 48px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main .about-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+main .about-intro {
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 32px;
+}
+
+main .about-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+main .about-block {
+    padding: 20px;
+    border: 1px solid #858585;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+main .about-block h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+}
+
+main .about-block p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+@media (min-width: 640px) {
+    main .about-details {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    main .about-block {
+        flex: 1 1 200px;
+    }
 }
 
 footer {
