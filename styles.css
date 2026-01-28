@@ -1,6 +1,14 @@
+:root {
+    --bg: #11152C;
+    --border: #858585;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-hover: rgba(255, 255, 255, 0.06);
+    --card-hover-border: rgba(255, 255, 255, 0.5);
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #11152C;
+    background-color: var(--bg);
     color: #FFFFFF;
 }
 
@@ -9,17 +17,35 @@ header {
     top: 0;
     left: 0;
     z-index: 100;
-    padding: 0 16px;
+    padding: 0 12px;
     height: 70px;
-    border-bottom: 1px solid #858585;
-    background: #11152C;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
+}
+
+header .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
 }
 
 header .logo {
     height: 54px;
+}
+
+header .header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
 }
 
 header .menu-logo {
@@ -31,35 +57,35 @@ header .menu-logo {
 header .menu-logo:hover { /* Added hover effect */
     transform: scale(1.2);
 } 
-header .mobile-menu { /* Added mobile menu */
-    display: flex; 
+header .mobile-menu {
+    display: flex;
     position: absolute;
-    top: 70px; 
+    top: 70px;
     left: 0;
     width: 100%;
-    background-color: #11152C; 
+    background-color: var(--bg);
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
-    border-bottom: 1px solid #858585;
-    z-index: 99; 
-
-    /* появление при нажатии */
+    border-bottom: 1px solid var(--border);
+    z-index: 99;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.4 ease;
+    transform: translateY(-16px);
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
 }
-header .mobile-menu a {
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    font-size: 18px;
-}
+
 header .mobile-menu.open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+
+header .mobile-menu a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 18px;
 }
 
 
@@ -68,62 +94,160 @@ header .tittle-header {
     font-weight: bold;
 }
 
-.category {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 16px;
-    margin-top: 28px;
-    margin-bottom: 8px;
-    padding: 24px 20px 28px;
-    justify-content: center;
-    align-items: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-main .category .tag {
+header .header-nav .tag {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 28px;
-    min-height: 48px;
-    border: 1px solid #858585;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.02);
-    color: #FFFFFF;
-    font-size: 15px;
+    padding: 8px 16px;
+    min-height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card-bg);
+    color: #FFF;
+    font-size: 14px;
     font-weight: 500;
     transition: all 0.3s ease;
     cursor: pointer;
     white-space: nowrap;
 }
 
-.category .tag:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.6);
-    transform: translateY(-2px);
+header .header-nav .tag:hover {
+    background: var(--card-hover);
+    border-color: var(--card-hover-border);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+    header .header-nav { display: none; }
+}
+
+/* Shared main blocks */
+main .main-block {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 12px 48px;
+}
+
+main .section-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #FFF;
+}
+
+main .section-desc {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 24px;
 }
 
 /* About section */
-main .about-section {
-    padding: 32px 16px 48px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-main .about-title {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #FFFFFF;
-}
-
 main .about-intro {
     font-size: 17px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 32px;
+}
+
+/* Skills section */
+main .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+}
+
+main .skill-tag {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card-bg);
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFF;
+}
+
+main .skill-tag:hover {
+    border-color: var(--card-hover-border);
+    background: var(--card-hover);
+}
+
+/* Certificates & Projects — общие стили карточек-ссылок */
+main .certificates-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+main .cert-item { margin: 0; }
+
+main .cert-link,
+main .project-card {
+    display: block;
+    padding: 18px 20px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card-bg);
+    color: #FFF;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+main .cert-link:hover,
+main .project-card:hover {
+    border-color: var(--card-hover-border);
+    background: var(--card-hover);
+}
+
+main .project-card {
+    padding: 22px 20px;
+}
+
+main .cert-title {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+main .cert-issuer {
+    display: block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* Projects */
+main .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+main .project-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: #FFF;
+}
+
+main .project-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 10px;
+}
+
+main .project-link-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+main .project-card:hover .project-link-text {
+    color: #FFFFFF;
 }
 
 main .about-details {
@@ -134,16 +258,16 @@ main .about-details {
 
 main .about-block {
     padding: 20px;
-    border: 1px solid #858585;
+    border: 1px solid var(--border);
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--card-bg);
 }
 
 main .about-block h3 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 8px;
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 main .about-block p {
@@ -161,12 +285,16 @@ main .about-block p {
     main .about-block {
         flex: 1 1 200px;
     }
+    main .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 footer {
     margin-top: 50px;
     margin-bottom: 16px;
-    padding: 0 16px;
+    padding: 0 12px;
 }
 
 footer .footer-logo {
@@ -176,11 +304,13 @@ footer .footer-logo {
     margin: 0 auto;
 }
 
-footer .list-documents {
-margin: 24px 0;
-list-style: none;
-padding: 0;
+footer .list-documents,
+footer .contact ul {
+    list-style: none;
+    padding: 0;
 }
+
+footer .list-documents { margin: 24px 0; }
 
 footer .list-documents li {
     margin-bottom: 16px;
@@ -189,17 +319,10 @@ footer .list-documents li {
 
 footer a {
     text-decoration: none;
-    color: #FFFFFF
+    color: #FFF;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-footer .contact ul {
-    list-style: none;
-    padding: 0;
-}
+a:hover { text-decoration: underline; }
 
 footer .contact h3 {
     text-align: center;
@@ -219,6 +342,6 @@ footer .contact li a {
 footer .rights {
     text-align: center;
     font-size: 12px;
-    color: #858585;
+    color: var(--border);
     opacity: 0.5;
 }

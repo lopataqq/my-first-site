@@ -9,49 +9,72 @@
 <body>
     
     <header>
-        <img src="images/heart.svg" alt="lopataqq-logo" class="logo">
-
-        <div class="tittle-header">lopataqq</div>
-
-        <img src="images/burger-menu.svg" 
-        alt="menu"
-        class="menu-logo"
-        id="burger-btn"> <!-- кнопка всплывающего меню -->
-
-        <div class="mobile-menu" id="mobile-menu"> <!-- всплывающее меню -->
-          <a href="#">About</a> 
-          <a href="#">Projects</a> 
-          <a href="#">Contact</a> 
-          <a href="#">Github</a> 
-      </div>
-    </header>
-
-    <main>
-        <div class = "category">
+        <div class="header-brand">
+            <img src="images/heart.svg" alt="lopataqq-logo" class="logo">
+            <span class="tittle-header">lopataqq</span>
+        </div>
+        <nav class="header-nav">
             <button class="tag" type="button">Информация</button>
             <button class="tag" type="button">Проекты</button>
             <button class="tag" type="button">Контакты</button>
             <button class="tag" type="button">Блог</button>
+        </nav>
+        <img src="images/burger-menu.svg" alt="меню" class="menu-logo" id="burger-btn">
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+            <a href="#">Github</a>
         </div>
-        
-        <section class="about-section">
-            <h2 class="about-title">Обо мне</h2>
-            <p class="about-intro">
-                Привет! Я lopataqq — создаю проекты, учусь новому и делюсь тем, что интересно. 
-            </p>
-            <div class="about-details">
-                <div class="about-block">
-                    <h3>Деятельность</h3>
-                    <p>Веб-разработка, фронтенд, личные проекты и эксперименты с технологиями.</p>
-                </div>
-                <div class="about-block">
-                    <h3>Интересы</h3>
-                    <p>Программирование, UI/UX, музыка, игры и всё, что связано с креативом.</p>
-                </div>
-                <div class="about-block">
-                    <h3>Цель</h3>
-                    <p>Изучение JavaScript, Typescript и дальше по roadmap.</p>
-                </div>
+    </header>
+
+    <main>
+        <section class="skills-section main-block" id="skills">
+            <h2 class="section-title">Навыки</h2>
+            <p class="section-desc">Технологии и инструменты, с которыми работаю</p>
+            <div class="skills-list">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <!-- Добавь свои: Git, React, Figma и т.д. -->
+            </div>
+        </section>
+
+        <section class="certificates-section main-block" id="certificates">
+            <h2 class="section-title">Сертификаты</h2>
+            <p class="section-desc">Курсы и подтверждения знаний</p>
+            <ul class="certificates-list">
+                <li class="cert-item">
+                    <a href="https://ibb.co/j9WhXWDt" class="cert-link" target="_blank" rel="noopener">
+                        <span class="cert-title">HTML Certificate</span>
+                        <span class="cert-issuer">Сертификат № CERT-2025-MJJYD3YN</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="https://ibb.co/Txzpr1Nn" class="cert-link" target="_blank" rel="noopener">
+                        <span class="cert-title">CSS3 Certificate</span>
+                        <span class="cert-issuer">Сертификат № CERT-2026-MKRLQWRQ</span>
+                    </a>
+                </li>
+                <!-- блок cert-item с сертификатами -->
+            </ul>
+        </section>
+
+        <section class="projects-section main-block" id="projects">
+            <h2 class="section-title">Проекты</h2>
+            <p class="section-desc">Ссылки на работы и репозитории</p>
+            <div class="projects-grid">
+                <a href="https://github.com/lopataqq/mini-project-checkuser" class="project-card" target="_blank" rel="noopener">
+                    <h3 class="project-name">Мини-проект "Checkuser"</h3>
+                    <p class="project-desc">Простая мини-программа, которая проверяет данные пользователя: имя, возраст и страну.В зависимости от введённой информации программа скажет, может ли пользователь, например, получить доступ к сайту, скидку или регистрацию.</p>
+                    <span class="project-link-text">Открыть →</span>
+                </a>
+                <a href="#" class="project-card" target="_blank" rel="noopener">
+                    <h3 class="project-name">Второй проект</h3>
+                    <p class="project-desc">Описание и ссылка на GitHub</p>
+                    <span class="project-link-text">Открыть →</span>
+                </a>
+                <!-- блок project-card с описанием проектов -->
             </div>
         </section>
     </main>
