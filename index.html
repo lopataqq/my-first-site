@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     
@@ -14,22 +15,22 @@
             <span class="tittle-header">lopataqq</span>
         </div>
         <nav class="header-nav">
-            <a href="#" class="tagurl" alt="mainpage">На главную страницу</a> <!-- якорь на главную страницу -->
-            <a href="#projects" class="tagurl" alt="projects">Проекты</a> <!-- якорь на секцию проектов -->
-            <a href="#phonenumber" class="tagurl" alt="contacti">Контакты</a> <!-- якорь на контактную информацию в футере -->
-            <a href="https://github.com/lopataqq" target="_blank" class="tagurl" alt="github">Github</a> <!-- ссылка на GitHub, при нажатии открывает новую вкладку -->
+            <a href="index.html" class="tagurl">На главную страницу</a> <!-- якорь на главную страницу -->
+            <a href="#projects" class="tagurl">Проекты</a> <!-- якорь на секцию проектов -->
+            <a href="#phonenumber" class="tagurl">Контакты</a> <!-- якорь на контактную информацию в футере -->
+            <a href="https://github.com/lopataqq" target="_blank" class="tagurl" rel="noopener">Github</a> <!-- ссылка на GitHub, при нажатии открывает новую вкладку -->
         </nav>
         <img src="images/burger-menu.svg" alt="меню" class="menu-logo" id="burger-btn"> <!-- кнопка бургер-меню -->  
         <div class="mobile-menu" id="mobile-menu"> <!-- мобильное меню в хедере -->
             <a href="#">About</a>
             <a href="#projects">Projects</a> <!-- якорь на секцию проектов -->
             <a href="#phonenumber">Contact</a> <!-- якорь на контактную информацию в футере -->
-            <a href="https://github.com/lopataqq" target="_blank" alt="github">Github</a> <!-- ссылка на GitHub, при нажатии открывает новую вкладку -->
+            <a href="https://github.com/lopataqq" target="_blank" rel="noopener">Github</a> <!-- ссылка на GitHub, при нажатии открывает новую вкладку -->
         </div>
     </header>
 
     <main>
-        <section class="skills-section main-block" id="skills">
+        <section class="skills-section main-block" id="skills"> <!-- секция навыков -->
             <h2 class="section-title">Навыки</h2>
             <p class="section-desc">Технологии и инструменты, с которыми работаю</p>
             <div class="skills-list">
@@ -40,7 +41,7 @@
             </div>
         </section>
 
-        <section class="certificates-section main-block" id="certificates">
+        <section class="certificates-section main-block" id="certificates"> <!-- секция сертификатов -->
             <h2 class="section-title">Сертификаты</h2>
             <p class="section-desc">Курсы и подтверждения знаний</p>
             <ul class="certificates-list">
@@ -60,7 +61,7 @@
             </ul>
         </section>
 
-        <section class="projects-section main-block" id="projects">
+        <section class="projects-section main-block" id="projects"> <!-- секция проектов -->
             <h2 class="section-title" id="projects">Проекты</h2>
             <p class="section-desc">Ссылки на работы и репозитории</p>
             <div class="projects-grid">
@@ -80,7 +81,7 @@
     </main>
 
     <footer>
-        <img src="images/heart.svg" alt="logo" class="footer-logo">
+        <img src="images/heart.svg" alt="logo" class="footer-logo"> <!-- логотип в футере -->
         <ul class="list-documents">
             <li>
                 <a href="#">Правила пользования</a>
